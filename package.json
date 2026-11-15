@@ -1,7 +1,8 @@
 {
   "name": "sorayarose",
   "version": "1.0.0",
-  "description": "A simple static website for Soraya Rose Studio Ltd: plain HTML pages styled with [Tailwind CSS](https://tailwindcss.com) loaded from its CDN. There is no build step.",
+  "private": true,
+  "description": "Website for Soraya Rose Studio Ltd, built with Astro.",
   "homepage": "https://github.com/jayvincentdev/sorayarose#readme",
   "bugs": {
     "url": "https://github.com/jayvincentdev/sorayarose/issues"
@@ -12,13 +13,16 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "serve ."
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "serve": "^14.2.8"
+    "@astrojs/markdown-satteri": "^0.4.10",
+    "astro": "^7.4.12"
   }
 }

@@ -1,6 +1,6 @@
 # Images
 
-Every photo on the site is loaded from this folder. Until a file exists, its slot shows a warm
+Every photo on the site is loaded from this folder (`public/images/`, served at `/images/`). Until a file exists, its slot shows a warm
 placeholder gradient, so you can add photos one at a time.
 
 Save each photo here with **exactly** the filename below (lowercase, `.jpg`). Landscape photos
@@ -41,5 +41,5 @@ around 2000px wide and under ~500 KB each keep the site fast.
 | `blog-2027-trends.jpg` | Blog – 'Our Interior Design Trend Predictions for 2027' |
 | `contact.jpg` | Contact page (portrait) |
 
-To use a different filename or format (e.g. `.webp`), change the matching `--img:url('images/…')`
-in the HTML.
+To use a different filename or format (e.g. `.webp`), change the matching `--img:url('/images/…')`
+in the page under `src/pages/` (or the `image:` line at the top of a blog post in `src/content/blog/`).

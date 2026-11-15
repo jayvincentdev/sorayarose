@@ -1,0 +1,52 @@
+---
+// Template for every blog post. The post text comes from src/content/blog/<slug>.md
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPosts, postUrl, formatMonth, type Post } from '../../data/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts(); // newest first
+  return posts.map((post, i) => ({
+    params: { slug: post.id },
+    props: { post, previous: posts[i + 1], next: posts[i - 1] },
+  }));
+}
+
+interface Props {
+  post: Post;
+  /** The next-older post, if any. */
+  previous?: Post;
+  /** The next-newer post, if any. */
+  next?: Post;
+}
+
+const { post, previous, next } = Astro.props;
+const { title, subtitle, description, date, image, signoff } = post.data;
+const { Content } = await render(post);
+---
+<BaseLayout title={title} description={description}>
+  <article>
+    <header class="mx-auto max-w-3xl px-6 pt-16 text-center lg:pt-24">
+      <a href="/blog/" class="eyebrow text-taupe hover:text-ink">&larr; Back to blog</a>
+      <p class="eyebrow mt-10 text-taupe">{formatMonth(date)}</p>
+      <h1 class="mt-5 font-display text-4xl font-light leading-tight lg:text-6xl">{title}</h1>
+      <p class="mt-5 font-display text-2xl italic text-taupe">{subtitle}</p>
+    </header>
+    <div class="mx-auto mt-14 max-w-6xl px-6 lg:px-10">
+      <div class="photo aspect-[4/3] sm:aspect-[16/9]" style={`--img:url('${image}')`} role="img" aria-label={title}></div>
+    </div>
+    <div class="article mx-auto max-w-3xl px-6 py-16 lg:py-24">
+      <p class="lead">{description}</p>
+      <Content />
+      <p class="signoff">{signoff}</p>
+    </div>
+  </article>
+  <nav class="mx-auto flex max-w-3xl justify-between gap-8 border-t border-ink/10 px-6 py-12" aria-label="More articles">
+    {previous
+      ? <a href={postUrl(previous)} class="group block max-w-xs"><span class="eyebrow text-taupe">&larr; Previous</span><span class="mt-2 block font-display text-xl group-hover:text-espresso">{previous.data.title}</span></a>
+      : <span></span>}
+    {next
+      ? <a href={postUrl(next)} class="group block max-w-xs text-right"><span class="eyebrow text-taupe">Next &rarr;</span><span class="mt-2 block font-display text-xl group-hover:text-espresso">{next.data.title}</span></a>
+      : <span></span>}
+  </nav>
+</BaseLayout>

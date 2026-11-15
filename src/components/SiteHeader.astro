@@ -1,0 +1,56 @@
+---
+import Logo from './Logo.astro';
+import { navLinks, isCurrent } from '../data/navigation';
+
+interface Props {
+  /**
+   * "solid": cream bar with the logo (most pages).
+   * "overlay": transparent, white text, laid over the home page hero.
+   */
+  variant?: 'solid' | 'overlay';
+}
+
+const { variant = 'solid' } = Astro.props;
+const overlay = variant === 'overlay';
+const pathname = Astro.url.pathname;
+const current = (href: string) => (isCurrent(href, pathname) ? 'page' : undefined);
+---
+<header class={overlay ? 'absolute inset-x-0 top-0 z-30 text-white' : 'relative z-30 border-b border-ink/10 bg-cream'}>
+  <div class={overlay
+    ? 'mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:justify-center lg:px-10 lg:py-8'
+    : 'mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10'}>
+    {overlay
+      ? <a href="/" class="font-display text-xl uppercase tracking-[0.3em] lg:hidden">Soraya Rose</a>
+      : <Logo />}
+    <nav class={overlay
+      ? 'hidden gap-12 text-xs uppercase tracking-[0.25em] lg:flex'
+      : 'hidden gap-9 text-xs uppercase tracking-[0.22em] lg:flex'} aria-label="Main">
+      {navLinks.map(({ href, label }) => (
+        <a href={href} class="nav-link" aria-current={current(href)}>{label}</a>
+      ))}
+    </nav>
+    <button type="button" class="-mr-2 p-2 lg:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false">
+      <span class="sr-only">Open menu</span>
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="hidden border-t border-ink/10 bg-cream text-ink lg:hidden" aria-label="Mobile">
+    <div class="flex flex-col px-6 py-2 text-sm uppercase tracking-[0.2em]">
+      {navLinks.map(({ href, label }) => (
+        <a href={href} class="border-b border-ink/10 py-4 last:border-0" aria-current={current(href)}>{label}</a>
+      ))}
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  document.querySelectorAll<HTMLButtonElement>('[data-menu-toggle]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const menu = document.getElementById(button.getAttribute('aria-controls') ?? '');
+      if (!menu) return;
+      const isOpen = !menu.classList.toggle('hidden');
+      button.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+</script>

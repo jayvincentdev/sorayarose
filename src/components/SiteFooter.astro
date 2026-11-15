@@ -1,0 +1,39 @@
+---
+import Logo from './Logo.astro';
+import { navLinks } from '../data/navigation';
+---
+<footer class="bg-ink text-cream/80">
+  <div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-10">
+    <div class="text-cream">
+      <Logo />
+      <p class="mt-6 max-w-xs text-sm leading-relaxed text-cream/70">Timeless, elegant interiors across London and the Home Counties.</p>
+    </div>
+    <div>
+      <p class="eyebrow text-cream/50">Explore</p>
+      <nav class="mt-4 flex flex-col gap-2 text-sm" aria-label="Footer">
+        {navLinks.map(({ href, label }) => <a href={href} class="hover:text-white">{label}</a>)}
+      </nav>
+    </div>
+    <div>
+      <p class="eyebrow text-cream/50">Studio</p>
+      <address class="mt-4 text-sm not-italic leading-relaxed">Kingshead House<br>15 London End<br>Beaconsfield, Bucks<br>HP9 2HN</address>
+    </div>
+    <div>
+      <p class="eyebrow text-cream/50">Contact</p>
+      <a href="mailto:hello@sorayarosestudio.co.uk" class="mt-4 block text-sm hover:text-white">hello@sorayarosestudio.co.uk</a>
+    </div>
+  </div>
+  <div class="border-t border-cream/10">
+    <div class="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-cream/50 sm:flex-row sm:justify-between lg:px-10">
+      <p>&copy; <span data-year>{new Date().getFullYear()}</span> Soraya Rose Studio Ltd. All rights reserved.</p>
+      <p>London &middot; Home Counties &middot; Beyond</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Keep the copyright year current between site rebuilds
+  document.querySelectorAll('[data-year]').forEach((el) => {
+    el.textContent = String(new Date().getFullYear());
+  });
+</script>

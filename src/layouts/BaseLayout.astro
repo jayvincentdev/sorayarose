@@ -1,0 +1,48 @@
+---
+// The page shell shared by every page: <head>, header, "Begin your project"
+// band and footer. Each page supplies its own <main> content.
+import SiteHeader from '../components/SiteHeader.astro';
+import CallToAction from '../components/CallToAction.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/global.css';
+
+interface Props {
+  /** Page name, shown as "<title> | Soraya Rose Studio". Leave out on the home page. */
+  title?: string;
+  description: string;
+  /** "overlay" lays a transparent header over a full-screen hero (home page). */
+  header?: 'solid' | 'overlay';
+  /** Show the "Begin your project" band above the footer. */
+  showCta?: boolean;
+}
+
+const { title, description, header = 'solid', showCta = true } = Astro.props;
+const pageTitle = title
+  ? `${title} | Soraya Rose Studio`
+  : 'Soraya Rose Studio | Luxury Interior Design in London & the Home Counties';
+---
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pageTitle}</title>
+  <meta name="description" content={description}>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <script is:inline src="https://cdn.tailwindcss.com"></script>
+  <script is:inline src="/assets/tailwind.config.js"></script>
+</head>
+<body class="bg-cream font-sans font-light text-ink antialiased">
+  <SiteHeader variant={header} />
+
+  <main>
+    <slot />
+  </main>
+
+  {showCta && <CallToAction />}
+  <SiteFooter />
+</body>
+</html>

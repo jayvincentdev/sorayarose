@@ -36,6 +36,12 @@ const numberedHeadings = [
 ];
 
 export default defineConfig({
+  server: {
+    // Let the dev/preview server answer requests through Cloudflare quick
+    // tunnels, whose hostnames change each time (the leading dot allows any
+    // subdomain of trycloudflare.com).
+    allowedHosts: ['.trycloudflare.com'],
+  },
   markdown: {
     processor: satteri({ hastPlugins: numberedHeadings }),
   },

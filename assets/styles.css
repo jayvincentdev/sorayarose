@@ -1,0 +1,116 @@
+/* Soraya Rose Studio – a few custom styles. Everything else is Tailwind utility classes. */
+
+html { scroll-behavior: smooth; }
+::selection { background: #4b3527; color: #f6f1ea; }
+
+/* Small uppercase labels ("LUXURY INTERIORS. TIMELESS SPACES.") */
+.eyebrow {
+  font-family: 'Jost', system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* SR monogram: the R tucks in under the S */
+.monogram {
+  display: inline-flex;
+  align-items: flex-start;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  line-height: 0.8;
+}
+.monogram span:last-child { margin-left: -0.3em; margin-top: 0.22em; }
+
+/* Photo slots.
+   Each slot sets --img to a file in /images. Until that file exists,
+   the warm gradient underneath shows as a placeholder. */
+.photo {
+  background-color: #c9b49c;
+  background-image: var(--img, none), linear-gradient(135deg, #dccab4 0%, #ab9076 55%, #6f5643 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Buttons and links */
+.btn, .btn-outline, .link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Jost', system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.btn { padding: 1rem 1.9rem; background: #4b3527; color: #f6f1ea; }
+.btn:hover { background: #2a211b; }
+.btn-outline { padding: 1rem 1.9rem; border: 1px solid currentColor; }
+.btn-outline:hover { background: #f6f1ea; color: #2a211b; border-color: #f6f1ea; }
+.link-arrow { padding-bottom: 0.3rem; border-bottom: 1px solid rgba(42, 33, 27, 0.3); }
+.link-arrow:hover { border-color: currentColor; }
+
+/* Navigation underline */
+.nav-link { position: relative; padding-bottom: 0.35rem; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after { transform: scaleX(1); }
+#mobile-menu a[aria-current="page"] { color: #8c7a68; }
+
+/* Blog article body */
+.article { font-size: 1.125rem; line-height: 1.85; color: rgba(42, 33, 27, 0.82); }
+.article > * + * { margin-top: 1.25rem; }
+.article .lead {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.9rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: #2a211b;
+}
+.article h2 {
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #2a211b;
+}
+.article h2 .num {
+  font-family: 'Jost', system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #8c7a68;
+}
+.article .note { border-left: 1px solid #8c7a68; padding: 0.25rem 0 0.25rem 1.5rem; }
+.article .note strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: 'Jost', system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8c7a68;
+}
+.article .signoff {
+  margin-top: 3rem;
+  text-align: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.75rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: #2a211b;
+}

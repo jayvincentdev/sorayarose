@@ -1,11 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soraya Rose</title>
+  <title>Soraya Rose Studio | Luxury Interior Design in London &amp; the Home Counties</title>
+  <meta name="description" content="Soraya Rose Studio is a boutique interior design practice creating timeless, elegant interiors across London and the Home Counties.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body>
-  <h1>Hello, world!</h1>
+<body class="bg-cream font-sans font-light text-ink antialiased">
+  <header class="absolute inset-x-0 top-0 z-30 text-white">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:justify-center lg:px-10 lg:py-8">
+      <a href="index.html" class="font-display text-xl uppercase tracking-[0.3em] lg:hidden">Soraya Rose</a>
+      <nav class="hidden gap-12 text-xs uppercase tracking-[0.25em] lg:flex" aria-label="Main">
+        <a href="index.html" class="nav-link" aria-current="page">About</a>
+        <a href="our-story.html" class="nav-link">Our Story</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="services.html" class="nav-link">Our Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <button type="button" class="-mr-2 p-2 lg:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false">
+        <span class="sr-only">Open menu</span>
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden border-t border-ink/10 bg-cream text-ink lg:hidden" aria-label="Mobile">
+      <div class="flex flex-col px-6 py-2 text-sm uppercase tracking-[0.2em]">
+        <a href="index.html" class="border-b border-ink/10 py-4 last:border-0" aria-current="page">About</a>
+        <a href="our-story.html" class="border-b border-ink/10 py-4 last:border-0">Our Story</a>
+        <a href="portfolio.html" class="border-b border-ink/10 py-4 last:border-0">Portfolio</a>
+        <a href="services.html" class="border-b border-ink/10 py-4 last:border-0">Our Services</a>
+        <a href="blog.html" class="border-b border-ink/10 py-4 last:border-0">Blog</a>
+        <a href="contact.html" class="border-b border-ink/10 py-4 last:border-0">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+  <section class="relative flex min-h-[92vh] items-center justify-center overflow-hidden text-white">
+    <div class="photo absolute inset-0" style="--img:url('images/home-hero.jpg')" role="img" aria-label="A warm, elegant living room by Soraya Rose Studio"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/45"></div>
+    <div class="relative z-10 px-6 pt-16 text-center">
+      <span class="monogram text-[7rem] sm:text-[9rem]" aria-hidden="true"><span>S</span><span>R</span></span>
+      <p class="mt-8 font-display text-3xl font-light uppercase tracking-[0.3em] sm:text-5xl">Soraya Rose</p>
+      <p class="mt-3 text-xs uppercase tracking-[0.6em]">Studio</p>
+      <span class="mx-auto my-6 block h-px w-24 bg-white/60"></span>
+      <p class="text-[0.7rem] uppercase tracking-[0.5em]">Interior Design</p>
+    </div>
+    <a href="#intro" class="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-white/80 hover:text-white" aria-label="Scroll to content">
+      <svg class="h-10 w-6 animate-bounce" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2v34M4 28l8 8 8-8"/></svg>
+    </a>
+  </section>
+
+  <section id="intro" class="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+    <div class="grid gap-10 lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-16">
+      <div>
+        <p class="eyebrow text-taupe">Luxury interiors. Timeless spaces.</p>
+        <h1 class="mt-5 font-display text-5xl font-light leading-[1.05] lg:text-7xl">Thoughtfully designed.<br><em>Beautifully lived.</em></h1>
+      </div>
+      <span class="hidden h-32 w-px bg-ink/20 lg:block"></span>
+      <p class="text-lg leading-relaxed text-ink/75">Soraya Rose Studio is a boutique interior design practice specialising in creating timeless, elegant and beautifully considered interiors across London and the Home Counties.</p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-6 pb-24 lg:px-10 lg:pb-32">
+    <div class="grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+      <a href="our-story.html" class="group block text-center">
+        <div class="overflow-hidden"><div class="photo aspect-[4/5] transition duration-700 group-hover:scale-105" style="--img:url('images/home-card-story.jpg')" aria-hidden="true"></div></div>
+        <h3 class="mt-6 font-display text-2xl uppercase tracking-[0.15em]">Our Story</h3>
+        <p class="mx-auto mt-2 max-w-[15rem] text-[0.7rem] uppercase leading-relaxed tracking-[0.2em] text-taupe">The people, passion and philosophy behind the studio</p>
+        <span class="link-arrow mt-5">Discover more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="services.html" class="group block text-center">
+        <div class="overflow-hidden"><div class="photo aspect-[4/5] transition duration-700 group-hover:scale-105" style="--img:url('images/home-card-services.jpg')" aria-hidden="true"></div></div>
+        <h3 class="mt-6 font-display text-2xl uppercase tracking-[0.15em]">Our Services</h3>
+        <p class="mx-auto mt-2 max-w-[15rem] text-[0.7rem] uppercase leading-relaxed tracking-[0.2em] text-taupe">Bespoke interiors, tailored to you</p>
+        <span class="link-arrow mt-5">Explore services <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="portfolio.html" class="group block text-center">
+        <div class="overflow-hidden"><div class="photo aspect-[4/5] transition duration-700 group-hover:scale-105" style="--img:url('images/home-card-portfolio.jpg')" aria-hidden="true"></div></div>
+        <h3 class="mt-6 font-display text-2xl uppercase tracking-[0.15em]">Portfolio</h3>
+        <p class="mx-auto mt-2 max-w-[15rem] text-[0.7rem] uppercase leading-relaxed tracking-[0.2em] text-taupe">A collection of our latest projects</p>
+        <span class="link-arrow mt-5">View portfolio <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="blog.html" class="group block text-center">
+        <div class="overflow-hidden"><div class="photo aspect-[4/5] transition duration-700 group-hover:scale-105" style="--img:url('images/home-card-blog.jpg')" aria-hidden="true"></div></div>
+        <h3 class="mt-6 font-display text-2xl uppercase tracking-[0.15em]">Blog</h3>
+        <p class="mx-auto mt-2 max-w-[15rem] text-[0.7rem] uppercase leading-relaxed tracking-[0.2em] text-taupe">Inspiration, insights and ideas</p>
+        <span class="link-arrow mt-5">Read the blog <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="bg-sand">
+    <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
+      <div class="photo min-h-[420px] lg:min-h-[640px]" style="--img:url('images/home-living.jpg')" role="img" aria-label="An elegant entrance hall"></div>
+      <div class="flex flex-col justify-center px-6 py-16 lg:px-20">
+        <p class="eyebrow text-taupe">Interiors that feel like home</p>
+        <h2 class="mt-4 font-display text-4xl font-light leading-tight lg:text-5xl">Beautifully considered <em>living</em></h2>
+        <span class="my-8 block h-px w-16 bg-ink/30"></span>
+        <div class="space-y-5 leading-relaxed text-ink/75">
+          <p>The studio brings together a shared passion for exceptional design, refined aesthetics and meticulous attention to detail. With a wealth of experience spanning luxury residential developments, architectural interior design and high-end hospitality, we offer a personal and collaborative approach to every project.</p>
+          <p>We believe that truly beautiful interiors should be more than simply visually captivating. They should reflect the individuality of those who inhabit them, balancing effortless sophistication with comfort, practicality and a sense of belonging.</p>
+        </div>
+        <div class="mt-10"><a href="our-story.html" class="btn">Our story <span aria-hidden="true">&rarr;</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
+      <div class="order-2 flex flex-col justify-center px-6 py-16 lg:order-1 lg:px-20">
+        <p class="eyebrow text-taupe">Our signature aesthetic</p>
+        <h2 class="mt-4 font-display text-4xl font-light leading-tight lg:text-5xl">Timeless, <em>enduring</em> elegance</h2>
+        <span class="my-8 block h-px w-16 bg-ink/30"></span>
+        <div class="space-y-5 leading-relaxed text-ink/75">
+          <p>From complete home transformations and extensive renovations to individual room designs, our approach is tailored to each client&rsquo;s vision, lifestyle and aspirations.</p>
+          <p>Our signature aesthetic embraces timeless elegance, natural materials, rich textures and carefully curated details. Whether creating a contemporary retreat or reimagining a traditional residence, we strive to achieve interiors that feel effortlessly luxurious, harmonious and enduring.</p>
+          <p>At Soraya Rose Studio, we pride ourselves on building lasting relationships with our clients, guiding them through the design journey with creativity, expertise and an unwavering commitment to quality.</p>
+        </div>
+        <div class="mt-10"><a href="services.html" class="btn">Our services <span aria-hidden="true">&rarr;</span></a></div>
+      </div>
+      <div class="photo order-1 min-h-[420px] lg:order-2 lg:min-h-[640px]" style="--img:url('images/home-aesthetic.jpg')" role="img" aria-label="Natural materials and rich textures in a finished interior"></div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl px-6 py-24 text-center lg:py-32">
+    <span class="monogram text-5xl text-taupe" aria-hidden="true"><span>S</span><span>R</span></span>
+    <blockquote class="mt-10 font-display text-3xl font-light italic leading-snug lg:text-5xl">&ldquo;Our philosophy is simple: to create exceptional spaces that are as beautiful to live in as they are to look at.&rdquo;</blockquote>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-6 pb-24 lg:px-10">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <div>
+        <p class="eyebrow text-taupe">Featured projects</p>
+        <h2 class="mt-3 font-display text-4xl font-light lg:text-5xl">Recent work</h2>
+      </div>
+      <a href="portfolio.html" class="link-arrow">View all projects <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <a href="portfolio.html" class="group block overflow-hidden" aria-label="View portfolio"><div class="photo aspect-[4/3] transition duration-700 group-hover:scale-105" style="--img:url('images/portfolio-01.jpg')" aria-hidden="true"></div></a>
+      <a href="portfolio.html" class="group block overflow-hidden" aria-label="View portfolio"><div class="photo aspect-[4/3] transition duration-700 group-hover:scale-105" style="--img:url('images/portfolio-02.jpg')" aria-hidden="true"></div></a>
+      <a href="portfolio.html" class="group block overflow-hidden" aria-label="View portfolio"><div class="photo aspect-[4/3] transition duration-700 group-hover:scale-105" style="--img:url('images/portfolio-03.jpg')" aria-hidden="true"></div></a>
+      <a href="portfolio.html" class="group block overflow-hidden" aria-label="View portfolio"><div class="photo aspect-[4/3] transition duration-700 group-hover:scale-105" style="--img:url('images/portfolio-04.jpg')" aria-hidden="true"></div></a>
+    </div>
+  </section>
+  </main>
+
+  <section class="relative overflow-hidden bg-espresso text-cream">
+    <div class="photo absolute inset-0 opacity-40" style="--img:url('images/cta.jpg')" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-espresso via-espresso/85 to-espresso/20"></div>
+    <div class="relative mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+      <p class="eyebrow text-cream/70">Let&rsquo;s create something beautiful</p>
+      <h2 class="mt-4 font-display text-4xl font-light lg:text-6xl">Begin your project</h2>
+      <a href="contact.html" class="btn-outline mt-8">Get in touch <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </section>
+
+  <footer class="bg-ink text-cream/80">
+    <div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-10">
+      <div class="text-cream">
+        <a href="index.html" class="flex items-center gap-3" aria-label="Soraya Rose Studio, home">
+        <span class="monogram text-4xl" aria-hidden="true"><span>S</span><span>R</span></span>
+        <span class="leading-none" aria-hidden="true">
+          <span class="block font-display text-lg uppercase tracking-[0.3em]">Soraya Rose</span>
+          <span class="mt-1 block text-[0.6rem] uppercase tracking-[0.5em] opacity-70">Studio</span>
+        </span>
+      </a>
+        <p class="mt-6 max-w-xs text-sm leading-relaxed text-cream/70">Timeless, elegant interiors across London and the Home Counties.</p>
+      </div>
+      <div>
+        <p class="eyebrow text-cream/50">Explore</p>
+        <nav class="mt-4 flex flex-col gap-2 text-sm" aria-label="Footer">
+          <a href="index.html" class="hover:text-white">About</a>
+          <a href="our-story.html" class="hover:text-white">Our Story</a>
+          <a href="portfolio.html" class="hover:text-white">Portfolio</a>
+          <a href="services.html" class="hover:text-white">Our Services</a>
+          <a href="blog.html" class="hover:text-white">Blog</a>
+          <a href="contact.html" class="hover:text-white">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <p class="eyebrow text-cream/50">Studio</p>
+        <address class="mt-4 text-sm not-italic leading-relaxed">Kingshead House<br>15 London End<br>Beaconsfield, Bucks<br>HP9 2HN</address>
+      </div>
+      <div>
+        <p class="eyebrow text-cream/50">Contact</p>
+        <a href="mailto:hello@sorayarosestudio.co.uk" class="mt-4 block text-sm hover:text-white">hello@sorayarosestudio.co.uk</a>
+      </div>
+    </div>
+    <div class="border-t border-cream/10">
+      <div class="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-cream/50 sm:flex-row sm:justify-between lg:px-10">
+        <p>&copy; <span data-year>2026</span> Soraya Rose Studio Ltd. All rights reserved.</p>
+        <p>London &middot; Home Counties &middot; Beyond</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
 </body>
 </html>

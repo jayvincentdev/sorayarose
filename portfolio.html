@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Soraya Rose Studio</title>
+  <meta name="description" content="A selection of timeless, elegant interiors by Soraya Rose Studio across London, the Home Counties and beyond.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/tailwind.config.js"></script>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="bg-cream font-sans font-light text-ink antialiased">
+  <header class="relative z-30 border-b border-ink/10 bg-cream">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Soraya Rose Studio, home">
+        <span class="monogram text-4xl" aria-hidden="true"><span>S</span><span>R</span></span>
+        <span class="leading-none" aria-hidden="true">
+          <span class="block font-display text-lg uppercase tracking-[0.3em]">Soraya Rose</span>
+          <span class="mt-1 block text-[0.6rem] uppercase tracking-[0.5em] opacity-70">Studio</span>
+        </span>
+      </a>
+      <nav class="hidden gap-9 text-xs uppercase tracking-[0.22em] lg:flex" aria-label="Main">
+        <a href="index.html" class="nav-link">About</a>
+        <a href="our-story.html" class="nav-link">Our Story</a>
+        <a href="portfolio.html" class="nav-link" aria-current="page">Portfolio</a>
+        <a href="services.html" class="nav-link">Our Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <button type="button" class="-mr-2 p-2 lg:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false">
+        <span class="sr-only">Open menu</span>
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden border-t border-ink/10 bg-cream text-ink lg:hidden" aria-label="Mobile">
+      <div class="flex flex-col px-6 py-2 text-sm uppercase tracking-[0.2em]">
+        <a href="index.html" class="border-b border-ink/10 py-4 last:border-0">About</a>
+        <a href="our-story.html" class="border-b border-ink/10 py-4 last:border-0">Our Story</a>
+        <a href="portfolio.html" class="border-b border-ink/10 py-4 last:border-0" aria-current="page">Portfolio</a>
+        <a href="services.html" class="border-b border-ink/10 py-4 last:border-0">Our Services</a>
+        <a href="blog.html" class="border-b border-ink/10 py-4 last:border-0">Blog</a>
+        <a href="contact.html" class="border-b border-ink/10 py-4 last:border-0">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+  <section class="mx-auto max-w-4xl px-6 pb-14 pt-20 text-center lg:pb-20 lg:pt-28">
+    <p class="eyebrow text-taupe">Portfolio</p>
+    <h1 class="mt-5 font-display text-5xl font-light leading-[1.05] lg:text-7xl">Our <em>work</em></h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink/70">A selection of timeless, elegant interiors across London, the Home Counties and beyond.</p>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-6 pb-24 lg:px-10">
+    <!-- To add more photos, copy a <figure> block and point it at the next image, e.g. images/portfolio-13.jpg -->
+    <div class="gap-6 sm:columns-2 lg:columns-3">
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-[4/5] transition duration-700 hover:scale-105" style="--img:url('images/portfolio-01.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-[4/3] transition duration-700 hover:scale-105" style="--img:url('images/portfolio-02.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-square transition duration-700 hover:scale-105" style="--img:url('images/portfolio-03.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-[3/4] transition duration-700 hover:scale-105" style="--img:url('images/portfolio-04.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-[4/3] transition duration-700 hover:scale-105" style="--img:url('images/portfolio-05.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-[4/5] transition duration-700 hover:scale-105" style="--img:url('images/portfolio-06.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-[4/5] transition duration-700 hover:scale-105" style="--img:url('images/portfolio-07.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-[4/3] transition duration-700 hover:scale-105" style="--img:url('images/portfolio-08.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-square transition duration-700 hover:scale-105" style="--img:url('images/portfolio-09.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-[3/4] transition duration-700 hover:scale-105" style="--img:url('images/portfolio-10.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-[4/3] transition duration-700 hover:scale-105" style="--img:url('images/portfolio-11.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+      <figure class="mb-6 break-inside-avoid overflow-hidden">
+        <div class="photo aspect-[4/5] transition duration-700 hover:scale-105" style="--img:url('images/portfolio-12.jpg')" role="img" aria-label="Interior by Soraya Rose Studio"></div>
+      </figure>
+    </div>
+  </section>
+  </main>
+
+  <section class="relative overflow-hidden bg-espresso text-cream">
+    <div class="photo absolute inset-0 opacity-40" style="--img:url('images/cta.jpg')" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-espresso via-espresso/85 to-espresso/20"></div>
+    <div class="relative mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+      <p class="eyebrow text-cream/70">Let&rsquo;s create something beautiful</p>
+      <h2 class="mt-4 font-display text-4xl font-light lg:text-6xl">Begin your project</h2>
+      <a href="contact.html" class="btn-outline mt-8">Get in touch <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </section>
+
+  <footer class="bg-ink text-cream/80">
+    <div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-10">
+      <div class="text-cream">
+        <a href="index.html" class="flex items-center gap-3" aria-label="Soraya Rose Studio, home">
+        <span class="monogram text-4xl" aria-hidden="true"><span>S</span><span>R</span></span>
+        <span class="leading-none" aria-hidden="true">
+          <span class="block font-display text-lg uppercase tracking-[0.3em]">Soraya Rose</span>
+          <span class="mt-1 block text-[0.6rem] uppercase tracking-[0.5em] opacity-70">Studio</span>
+        </span>
+      </a>
+        <p class="mt-6 max-w-xs text-sm leading-relaxed text-cream/70">Timeless, elegant interiors across London and the Home Counties.</p>
+      </div>
+      <div>
+        <p class="eyebrow text-cream/50">Explore</p>
+        <nav class="mt-4 flex flex-col gap-2 text-sm" aria-label="Footer">
+          <a href="index.html" class="hover:text-white">About</a>
+          <a href="our-story.html" class="hover:text-white">Our Story</a>
+          <a href="portfolio.html" class="hover:text-white">Portfolio</a>
+          <a href="services.html" class="hover:text-white">Our Services</a>
+          <a href="blog.html" class="hover:text-white">Blog</a>
+          <a href="contact.html" class="hover:text-white">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <p class="eyebrow text-cream/50">Studio</p>
+        <address class="mt-4 text-sm not-italic leading-relaxed">Kingshead House<br>15 London End<br>Beaconsfield, Bucks<br>HP9 2HN</address>
+      </div>
+      <div>
+        <p class="eyebrow text-cream/50">Contact</p>
+        <a href="mailto:hello@sorayarosestudio.co.uk" class="mt-4 block text-sm hover:text-white">hello@sorayarosestudio.co.uk</a>
+      </div>
+    </div>
+    <div class="border-t border-cream/10">
+      <div class="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-cream/50 sm:flex-row sm:justify-between lg:px-10">
+        <p>&copy; <span data-year>2026</span> Soraya Rose Studio Ltd. All rights reserved.</p>
+        <p>London &middot; Home Counties &middot; Beyond</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

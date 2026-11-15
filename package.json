@@ -1,0 +1,24 @@
+{
+  "name": "sorayarose",
+  "version": "1.0.0",
+  "description": "A simple static website for Soraya Rose Studio Ltd: plain HTML pages styled with [Tailwind CSS](https://tailwindcss.com) loaded from its CDN. There is no build step.",
+  "homepage": "https://github.com/jayvincentdev/sorayarose#readme",
+  "bugs": {
+    "url": "https://github.com/jayvincentdev/sorayarose/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jayvincentdev@github.com/jayvincentdev/sorayarose.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.8"
+  }
+}

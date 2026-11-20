@@ -27,10 +27,10 @@ const { Content } = await render(post);
 <BaseLayout title={title} description={description}>
   <article>
     <header class="mx-auto max-w-3xl px-6 pt-16 text-center lg:pt-24">
-      <a href="/blog/" class="eyebrow text-taupe hover:text-ink">&larr; Back to blog</a>
-      <p class="eyebrow mt-10 text-taupe">{formatMonth(date)}</p>
+      <a href="/blog/" class="eyebrow text-brown hover:text-ink">&larr; Back to blog</a>
+      <p class="eyebrow mt-10 text-brown">{formatMonth(date)}</p>
       <h1 class="mt-5 font-display text-4xl font-light leading-tight lg:text-6xl">{title}</h1>
-      <p class="mt-5 font-display text-2xl italic text-taupe">{subtitle}</p>
+      <p class="mt-5 font-display text-2xl italic text-brown">{subtitle}</p>
     </header>
     <div class="mx-auto mt-14 max-w-6xl px-6 lg:px-10">
       <div class="photo aspect-[4/3] sm:aspect-[16/9]" style={`--img:url('${image}')`} role="img" aria-label={title}></div>
@@ -43,10 +43,10 @@ const { Content } = await render(post);
   </article>
   <nav class="mx-auto flex max-w-3xl justify-between gap-8 border-t border-ink/10 px-6 py-12" aria-label="More articles">
     {previous
-      ? <a href={postUrl(previous)} class="group block max-w-xs"><span class="eyebrow text-taupe">&larr; Previous</span><span class="mt-2 block font-display text-xl group-hover:text-espresso">{previous.data.title}</span></a>
+      ? <a href={postUrl(previous)} class="group block max-w-xs"><span class="eyebrow text-brown">&larr; Previous</span><span class="mt-2 block font-display text-xl group-hover:text-brown">{previous.data.title}</span></a>
       : <span></span>}
     {next
-      ? <a href={postUrl(next)} class="group block max-w-xs text-right"><span class="eyebrow text-taupe">Next &rarr;</span><span class="mt-2 block font-display text-xl group-hover:text-espresso">{next.data.title}</span></a>
+      ? <a href={postUrl(next)} class="group block max-w-xs text-right"><span class="eyebrow text-brown">Next &rarr;</span><span class="mt-2 block font-display text-xl group-hover:text-brown">{next.data.title}</span></a>
       : <span></span>}
   </nav>
 </BaseLayout>

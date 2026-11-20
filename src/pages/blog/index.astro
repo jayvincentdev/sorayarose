@@ -8,9 +8,9 @@ const [latest, ...older] = await getPosts();
 <BaseLayout title="Blog"
   description="Interior design ideas, advice and inspiration from Soraya Rose Studio.">
   <section class="mx-auto max-w-4xl px-6 pb-14 pt-20 text-center lg:pb-20 lg:pt-28">
-    <p class="eyebrow text-taupe">Blog</p>
+    <p class="eyebrow text-brown">Blog</p>
     <h1 class="mt-5 font-display text-5xl font-light leading-[1.05] lg:text-7xl">Inspiration &amp; <em>insights</em></h1>
-    <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink/70">Ideas, advice and inspiration from the Soraya Rose Studio team.</p>
+    <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink">Ideas, advice and inspiration from the Soraya Rose Studio team.</p>
   </section>
 
   <section class="mx-auto max-w-7xl px-6 pb-24 lg:px-10">
@@ -18,9 +18,9 @@ const [latest, ...older] = await getPosts();
       <a href={postUrl(latest)} class="group grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
         <div class="overflow-hidden"><div class="photo aspect-[4/3] transition duration-700 group-hover:scale-105" style={`--img:url('${latest.data.image}')`} aria-hidden="true"></div></div>
         <div>
-          <p class="eyebrow text-taupe">Latest &middot; {formatMonth(latest.data.date)}</p>
+          <p class="eyebrow text-brown">Latest &middot; {formatMonth(latest.data.date)}</p>
           <h2 class="mt-4 font-display text-4xl font-light leading-tight lg:text-5xl">{latest.data.title}</h2>
-          <p class="mt-4 text-lg leading-relaxed text-ink/70">{latest.data.description}</p>
+          <p class="mt-4 text-lg leading-relaxed text-ink">{latest.data.description}</p>
           <span class="link-arrow mt-6">Read article <span aria-hidden="true">&rarr;</span></span>
         </div>
       </a>
@@ -30,9 +30,9 @@ const [latest, ...older] = await getPosts();
         {older.map((post) => (
           <a href={postUrl(post)} class="group block">
             <div class="overflow-hidden"><div class="photo aspect-[4/3] transition duration-700 group-hover:scale-105" style={`--img:url('${post.data.image}')`} aria-hidden="true"></div></div>
-            <p class="eyebrow mt-6 text-taupe">{formatMonth(post.data.date)}</p>
+            <p class="eyebrow mt-6 text-brown">{formatMonth(post.data.date)}</p>
             <h2 class="mt-3 font-display text-3xl font-light leading-tight">{post.data.title}</h2>
-            <p class="mt-3 leading-relaxed text-ink/70">{post.data.description}</p>
+            <p class="mt-3 leading-relaxed text-ink">{post.data.description}</p>
             <span class="link-arrow mt-5">Read article <span aria-hidden="true">&rarr;</span></span>
           </a>
         ))}

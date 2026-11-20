@@ -3,12 +3,12 @@
 tailwind.config = {
   theme: {
     extend: {
+      // Soraya Rose brand palette
       colors: {
-        cream: '#f6f1ea',    // page background
-        sand: '#ede4d8',     // alternate section background
-        taupe: '#8c7a68',    // labels and accents
-        ink: '#2a211b',      // body text and footer
-        espresso: '#4b3527', // buttons and dark bands
+        stone: '#E3D8CD', // Light stone: page background, light text on dark bands
+        taupe: '#BCAA93', // Taupe: alternate sections (used at 30%: bg-taupe/30)
+        brown: '#82684B', // Mid brown: labels, accents, "Begin your project" band
+        ink: '#3A3229',   // Dark brown-black: text, buttons, footer
       },
       fontFamily: {
         display: ['"Cormorant Garamond"', 'Georgia', 'serif'],

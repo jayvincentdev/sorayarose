@@ -100,7 +100,11 @@ generated from the dates, newest first. Only the month and year of `date` are sh
 
 ## Publishing
 
-Run `npm run build` and upload the contents of `dist/` to any static host. Netlify, Vercel and
-Cloudflare Pages can build it automatically from the repository (build command
-`npm run build`, output folder `dist`). For GitHub Pages, see
-[Astro's deployment guide](https://docs.astro.build/en/guides/deploy/github/).
+The site is published to GitHub Pages at <https://www.sorayarosestudio.co.uk>. Every push to
+`main` builds and deploys it automatically
+([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)); progress shows in the
+repository's **Actions** tab. A deploy can also be started by hand from there
+("Deploy to GitHub Pages" → **Run workflow**).
+
+The custom domain is set in [`public/CNAME`](public/CNAME) and as `site` in `astro.config.mjs`.
+If the domain changes, update both.

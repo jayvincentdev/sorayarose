@@ -36,6 +36,8 @@ const numberedHeadings = [
 ];
 
 export default defineConfig({
+  // The live address (GitHub Pages with a custom domain; see public/CNAME).
+  site: 'https://www.sorayarosestudio.co.uk',
   server: {
     // Let the dev/preview server answer requests through Cloudflare quick
     // tunnels, whose hostnames change each time (the leading dot allows any

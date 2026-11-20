@@ -12,16 +12,6 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase;
 }
 
-/* SR monogram: the R tucks in under the S */
-.monogram {
-  display: inline-flex;
-  align-items: flex-start;
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-weight: 300;
-  line-height: 0.8;
-}
-.monogram span:last-child { margin-left: -0.3em; margin-top: 0.22em; }
-
 /* Photo slots.
    Each slot sets --img to a file in public/images (e.g. url('/images/cta.jpg')). Until that file exists,
    the warm gradient underneath shows as a placeholder. */

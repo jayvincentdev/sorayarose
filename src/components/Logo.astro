@@ -1,8 +1,17 @@
 ---
 // SR monogram with the "Soraya Rose Studio" wordmark, linking home.
+interface Props {
+  /** "dark" for light backgrounds (header), "light" for dark backgrounds (footer). */
+  tone?: 'dark' | 'light';
+}
+
+const { tone = 'dark' } = Astro.props;
+const monogram = tone === 'light'
+  ? '/brand/soraya-rose-monogram-white.svg'
+  : '/brand/soraya-rose-monogram-dark.svg';
 ---
 <a href="/" class="flex items-center gap-3" aria-label="Soraya Rose Studio, home">
-  <span class="monogram text-4xl" aria-hidden="true"><span>S</span><span>R</span></span>
+  <img src={monogram} alt="" width="325" height="303" class="h-11 w-auto">
   <span class="leading-none" aria-hidden="true">
     <span class="block font-display text-lg uppercase tracking-[0.3em]">Soraya Rose</span>
     <span class="mt-1 block text-[0.6rem] uppercase tracking-[0.5em] opacity-70">Studio</span>
